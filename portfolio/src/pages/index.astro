@@ -1,0 +1,52 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+const socialLinks = [
+	{
+		name: "GitHub",
+		url: "https://github.com/gAngelov24",
+		color: "text-blue-700",
+	},
+	{
+		name: "LinkedIn",
+		url: "https://www.linkedin.com/in/george-angelov/",
+		color: "text-blue-700",
+	},
+];
+---
+
+<MainLayout title="George Angelov | Home">
+	<h1 class="text-4xl font-bold">George Angelov</h1>
+	<p>Welcome to my corner of the internet.</p>
+	<ul class="flex gap-4">
+		{socialLinks.map((link) => (
+			<li>
+				<a href={link.url} class={link.color}>
+					Follow me on {link.name}
+				</a>
+			</li>	
+		))}
+	</ul>
+</MainLayout>
+<!-- 
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body class="antialiased max-w-4xl mx-auto p-8">
+		<h1>George Angelov</h1>
+		<ul class="flex gap-4">
+			{socialLinks.map((link) => (
+				<li>
+					<a href={link.url} class={link.color}>
+						Follow me on {link.name}
+					</a>
+				</li>	
+			))}
+		</ul>
+	</body>
+</html> -->

@@ -1,0 +1,20 @@
+---
+// You can pass the page title as a prop
+const { title } = Astro.props;
+import Navigation from '../components/Navigation.astro';
+import '../styles/global.css';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width" />
+  </head>
+  <body class="antialiased max-w-4xl mx-auto p-8">
+    <Navigation />
+    <main>
+      <slot /> <!-- Page will be injected here -->
+    </main>
+  </body>
+</html>
